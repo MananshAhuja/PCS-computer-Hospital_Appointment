@@ -6,10 +6,7 @@
 
 int main()
 {
-    load_doctors();
-    load_patients();
-    load_appointments();
-    if (!login()) {
+  if (!login()) {
         return 0;
     }
 

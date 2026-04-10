@@ -1,40 +1,4 @@
 #include <stdio.h>
-void load_doctors() {
-    FILE *fp = fopen("doctors.txt", "r");
-    struct Doctor d;
-
-    if (fp == NULL) return;
-
-    while (fscanf(fp, "%d %s %s", &d.id, d.name, d.specialization) != EOF) {
-        doctors[doctor_count++] = d;
-    }
-
-    fclose(fp);
-}
-void load_patients() {
-    FILE *fp = fopen("patients.txt", "r");
-    struct Patient p;
-
-    if (fp == NULL) return;
-
-    while (fscanf(fp, "%d %s %d", &p.id, p.name, &p.age) != EOF) {
-        patients[patient_count++] = p;
-    }
-
-    fclose(fp);
-}
-void load_patients() {
-    FILE *fp = fopen("patients.txt", "r");
-    struct Patient p;
-
-    if (fp == NULL) return;
-
-    while (fscanf(fp, "%d %s %d", &p.id, p.name, &p.age) != EOF) {
-        patients[patient_count++] = p;
-    }
-
-    fclose(fp);
-}
 void save_doc(struct Doctor d)
 {
   FILE *p = fopen("doc.txt", "a");
