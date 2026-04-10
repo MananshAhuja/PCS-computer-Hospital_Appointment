@@ -1,18 +1,18 @@
+
 #include <stdio.h>
-#include "string.h"
 int login ()
 {
   char username[50];
   char password[50];
-  int atempts = 4;
+  int attempts = 4;
   while (attempts>0)
   {
     printf("\n=== Login ===\n");
     printf("Enter Username: ");
-    scanf("%[^\n]s", username);
-    printf("Enter Passwoerd: ");
-    scanf("%[^\n]s", password);
-    if(strcmp(password,"1234")&&strcmp(username,"admin"))
+    scanf(" %[^\n]s", username);
+    printf("Enter Password: ");
+    scanf(" %[^\n]s", password);
+    if(my_strcmp(password,"1234")==0 &&my_strcmp(username,"admin")== 0)
        {
         printf("Login Sucessfull! \n");
         return 1;
@@ -27,3 +27,5 @@ int login ()
   printf("Too many incorrect attempts Exiting.. \n");
   return 0;
 }
+
+

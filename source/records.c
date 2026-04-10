@@ -27,13 +27,13 @@ int patient_count = 0;
 int appoint_count = 0;
 void add_doc()
 {
-  struct doctor d;
+  struct Doctor d;
   printf("Enter Doctor ID: ");
-  scanf("%d", &d,id);
+  scanf(" %d", &d.id);
   printf("Enter Doctor Name: ");
-  scanf("%[^\n]s", d.name);
+  scanf(" %[^\n]s", d.name);
   printf("Enter Specialization: ");
-  scanf("%[^\n]s", d.special);
+  scanf(" %[^\n]s", d.special);
   doc[doc_count]= d;
   doc_count++;
   printf("Doctor added sucessfully! \n");
@@ -42,11 +42,11 @@ void add_patient()
 { 
   struct Patient p;
   printf("Enter Patient ID: ");
-  scanf("%d",&p.id);
+  scanf(" %d",&p.id);
   printf("Enter Name of the Patient: ");
-  scanf("%[^\n]s", p.name);
+  scanf(" %[^\n]s", p.name);
   printf("Enter the Age: ");
-  scanf("%[^\n]s", p.age);
+  scanf(" %d", &p.age);
   Patients[patient_count]=p;
   patient_count++;
   printf("Pateint addede sucessfully! \n");
@@ -55,14 +55,14 @@ void book_appoint()
 {
   struct Appointment a;
   printf("Enter Appointment ID: ");
-  scanf("%d", &a.app_id);
+  scanf(" %d", &a.app_id);
   printf("Enter Patient ID: ");
-  scanf("%d", &a.pt_id);
+  scanf(" %d", &a.pt_id);
   printf("Enter Doctor ID: ");
-  scanf("%d", &a.doc_id);
+  scanf(" %d", &a.doc_id);
   printf("Enter Date of Appointment: ");
-  scanf("%[^\n]c",a.date);
-  appointments[appoint_count];
+  scanf(" %[^\n]c",a.date);
+  appointments[appoint_count] = a;
   appoint_count++;
   printf("Appointment Booked Sucessfully ! \n");
 }
